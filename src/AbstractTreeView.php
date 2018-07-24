@@ -18,7 +18,7 @@ abstract class AbstractTreeView implements TreeViewInterface
      * @param int $level
      * @return array
      */
-    public function makeModelTree(TreeViewModelInterface $model, int $parent_id = 0, int $level = 0) : array
+    public function makeTree(TreeViewModelInterface $model, int $parent_id = 0, int $level = 0) : array
     {
         $roots = $model->getChildModels($parent_id);
         if(is_null($roots)){
@@ -29,7 +29,7 @@ abstract class AbstractTreeView implements TreeViewInterface
             $root->level = $level;
             $tree[] = $root;
             if( $root->has_child == 1 ) {
-                $tree = array_merge($tree, $this->makeModelTree($model, $root->id,$level + 1));
+                $tree = array_merge($tree, $this->makeTree($model, $root->id,$level + 1));
             }
         }
         return $tree;
