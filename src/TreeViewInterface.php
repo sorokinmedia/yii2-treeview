@@ -16,5 +16,5 @@ interface TreeViewInterface
      * @param int $level
      * @return mixed
      */
-    public function makeTree(TreeViewModelInterface $model, int $parent_id = 0, int $level = 0);
+    public static function makeTree(TreeViewModelInterface $model, int $parent_id = 0, int $level = 0);
 }
