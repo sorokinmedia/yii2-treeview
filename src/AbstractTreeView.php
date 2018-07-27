@@ -1,12 +1,12 @@
 <?php
-namespace ma3obblu\treeview;
+namespace sorokinmedia\treeview;
 
 /**
  * абстрактный класс с реализацией построения дерева
  * требует на вход класс модели имплементирующйи интерфейс TreeViewModelInterface
  *
  * Class AbstractTreeView
- * @package ma3obblu\treeview
+ * @package sorokinmedia\treeview
  */
 abstract class AbstractTreeView implements TreeViewInterface
 {

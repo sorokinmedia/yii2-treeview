@@ -1,11 +1,11 @@
 <?php
-namespace ma3obblu\treeview;
+namespace sorokinmedia\treeview;
 
 /**
  * интерфейс должен быть имплементирован любой моделью, дерево которой надо построить
  * 
  * Interface TreeViewModelInterface
- * @package ma3obblu\treeview
+ * @package sorokinmedia\treeview
  */
 interface TreeViewModelInterface
 {    

@@ -1,5 +1,5 @@
 {
-    "name": "ma3obblu/yii2-treeview",
+    "name": "sorokinmedia/yii2-treeview",
     "description": "Tree view for Yii2",
     "type": "yii2-extension",
     "keywords": ["yii2", "yii 2", "active record", "tree"],
@@ -12,8 +12,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/Ma3oBblu/yii2-treeview/issues?state=open",
-        "source": "https://github.com/Ma3oBblu/yii2-treeview"
+        "issues": "https://github.com/sorokinmedia/yii2-treeview/issues?state=open",
+        "source": "https://github.com/sorokinmedia/yii2-treeview"
     },
     "require": {
         "yiisoft/yii2": ">=2.0.6"
@@ -23,8 +23,8 @@
     },
     "autoload": {
         "psr-4": {
-            "ma3obblu\\treeview\\": "src/",
-            "ma3obblu\\treeview\\tests\\": "tests/"
+            "sorokinmedia\\treeview\\": "src/",
+            "sorokinmedia\\treeview\\tests\\": "tests/"
         }
     },
     "extra": {

@@ -1,11 +1,11 @@
 <?php
-namespace ma3obblu\treeview;
+namespace sorokinmedia\treeview;
 
 /**
  * основной интерфейс построителя деревьев. интерфейс имплементирован в абстрактном классе
  *
  * Interface TreeViewModelInterface
- * @package ma3obblu\treeview
+ * @package sorokinmedia\treeview
  */
 interface TreeViewInterface
 {

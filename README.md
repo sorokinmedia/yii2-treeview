@@ -26,7 +26,7 @@ class CourseLesson extends CourseLessonAR implements TreeViewModelInterface
   
 Например `CourseLessonCommentTree`:
 ```php
-use ma3obblu\treeview\AbstractTreeView;
+use sorokinmedia\treeview\AbstractTreeView;
 
 class CourseLessonCommentTree extends AbstractTreeView
 {
