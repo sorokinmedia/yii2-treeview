@@ -27,4 +27,13 @@ interface TreeViewInterface
      * @return mixed
      */
     public static function makeTreeStatic(string $class_name, int $parent_id = 0, int $level = 0, $filter = null) : array;
+
+    /**
+     * собрать дерево моделей в упрощенном виде для селекта
+     * @param string $class_name
+     * @param int $parent_id
+     * @param string $level
+     * @return array
+     */
+    public static function makeTreeStaticArray(string $class_name, int $parent_id = 0, string $level = '') : array;
 }
