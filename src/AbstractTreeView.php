@@ -77,7 +77,7 @@ abstract class AbstractTreeView implements TreeViewInterface
         $tree = [];
         foreach ($roots as $root){
             $root->level = $level;
-            $tree = [
+            $tree[] = [
                 'id' => $root->id,
                 'name' => $root->level . $root->name
             ];
