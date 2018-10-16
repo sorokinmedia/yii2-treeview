@@ -63,14 +63,16 @@ abstract class AbstractTreeView implements TreeViewInterface
     }
 
     /**
+     * получает упрощенный массив объектов для селекта
      * @param string $class_name
+     * @param int $parent_id
      * @param string $level
      * @return array
      */
-    public static function makeTreeStaticArray(string $class_name, string $level = '') : array
+    public static function makeTreeStaticArray(string $class_name, int $parent_id = 0, string $level = '') : array
     {
         /** @var TreeViewModelStaticInterface $class_name */
-        $roots = $class_name::getChildModelsStatic(0);
+        $roots = $class_name::getChildModelsStatic($parent_id);
         if (is_null($roots)){
             return [];
         }
@@ -82,7 +84,7 @@ abstract class AbstractTreeView implements TreeViewInterface
                 'name' => $root->level . $root->name
             ];
             if ($root->has_child == 1){
-                $tree = array_merge($tree, self::makeTreeStaticArray($class_name, $root->level . '-'));
+                $tree = array_merge($tree, self::makeTreeStaticArray($class_name, $root->id, $root->level . '-'));
             }
         }
         return $tree;
