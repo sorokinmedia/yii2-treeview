@@ -4,15 +4,15 @@ namespace sorokinmedia\treeview;
 /**
  * интерфейс должен быть имплементирован любой моделью, дерево которой надо построить
  *
- * Interface TreeViewModelInterface
+ * Interface TreeViewModelStaticInterface
  * @package sorokinmedia\treeview
  */
-interface TreeViewModelInterface
+interface TreeViewModelStaticInterface
 {
     /**
-     * получить дочерние модели родителя
+     * получить дочерние модели родителя, статическая версия
      * @param int $parent_id
      * @return mixed
      */
-    public function getChildModels(int $parent_id);
+    public static function getChildModelsStatic(int $parent_id);
 }
