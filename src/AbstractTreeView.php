@@ -61,4 +61,30 @@ abstract class AbstractTreeView implements TreeViewInterface
         }
         return $tree;
     }
+
+    /**
+     * @param string $class_name
+     * @param string $level
+     * @return array
+     */
+    public static function makeTreeStaticArray(string $class_name, string $level = '') : array
+    {
+        /** @var TreeViewModelStaticInterface $class_name */
+        $roots = $class_name::getChildModelsStatic(0);
+        if (is_null($roots)){
+            return [];
+        }
+        $tree = [];
+        foreach ($roots as $root){
+            $root->level = $level;
+            $tree = [
+                'id' => $root->id,
+                'name' => $root->level . $root->name
+            ];
+            if ($root->has_child == 1){
+                $tree = array_merge($tree, self::makeTreeStaticArray($class_name, $root->level . '-'));
+            }
+        }
+        return $tree;
+    }
 }
