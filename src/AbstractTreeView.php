@@ -41,12 +41,13 @@ abstract class AbstractTreeView implements TreeViewInterface
      * @param string $class_name
      * @param int $parent_id
      * @param int $level
+     * @param null $filter
      * @return array
      */
-    public static function makeTreeStatic(string $class_name, int $parent_id = 0, int $level = 0) : array
+    public static function makeTreeStatic(string $class_name, int $parent_id = 0, int $level = 0, $filter = null) : array
     {
         /** @var TreeViewModelStaticInterface $class_name */
-        $roots = $class_name::getChildModelsStatic($parent_id);
+        $roots = $class_name::getChildModelsStatic($parent_id, $filter);
         if(is_null($roots)){
             return [];
         }
@@ -55,7 +56,7 @@ abstract class AbstractTreeView implements TreeViewInterface
             $root->level = $level;
             $tree[] = $root;
             if( $root->has_child == 1 ) {
-                $tree = array_merge($tree, self::makeTreeStatic($class_name, $root->id,$level + 1));
+                $tree = array_merge($tree, self::makeTreeStatic($class_name, $root->id,$level + 1, $filter));
             }
         }
         return $tree;

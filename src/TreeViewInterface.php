@@ -23,7 +23,8 @@ interface TreeViewInterface
      * @param string $class_name
      * @param int $parent_id
      * @param int $level
+     * @param null $filter
      * @return mixed
      */
-    public static function makeTreeStatic(string $class_name, int $parent_id = 0, int $level = 0) : array;
+    public static function makeTreeStatic(string $class_name, int $parent_id = 0, int $level = 0, $filter = null) : array;
 }
