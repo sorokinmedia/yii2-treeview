@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\treeview;
 
 /**
@@ -16,7 +17,7 @@ interface TreeViewInterface
      * @param int $level
      * @return mixed
      */
-    public static function makeTree(TreeViewModelInterface $model, int $parent_id = 0, int $level = 0) : array;
+    public static function makeTree(TreeViewModelInterface $model, int $parent_id = 0, int $level = 0): array;
 
     /**
      * собрать дерево моделей, для статического получения дочерних объектов
@@ -26,7 +27,7 @@ interface TreeViewInterface
      * @param null $filter
      * @return mixed
      */
-    public static function makeTreeStatic(string $class_name, int $parent_id = 0, int $level = 0, $filter = null) : array;
+    public static function makeTreeStatic(string $class_name, int $parent_id = 0, int $level = 0, $filter = null): array;
 
     /**
      * собрать дерево моделей в упрощенном виде для селекта
@@ -35,5 +36,5 @@ interface TreeViewInterface
      * @param string $level
      * @return array
      */
-    public static function makeTreeStaticArray(string $class_name, int $parent_id = 0, string $level = '') : array;
+    public static function makeTreeStaticArray(string $class_name, int $parent_id = 0, string $level = ''): array;
 }
