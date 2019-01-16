@@ -29,7 +29,7 @@ abstract class AbstractTreeView implements TreeViewInterface
         foreach ($roots as $root) {
             $root->level = $level;
             $tree[] = $root;
-            if ($root->has_child === 1) {
+            if ($root->has_child == 1) {
                 $tree = array_merge($tree, self::makeTree($model, $root->id, $level + 1));
             }
         }
@@ -56,7 +56,7 @@ abstract class AbstractTreeView implements TreeViewInterface
                 'id' => $root->id,
                 'name' => $root->level . $root->name
             ];
-            if ($root->has_child === 1) {
+            if ($root->has_child == 1) {
                 $tree = array_merge($tree, self::makeTreeArray($model, $root->id, $root->level . '-'));
             }
         }
@@ -83,7 +83,7 @@ abstract class AbstractTreeView implements TreeViewInterface
         foreach ($roots as $root) {
             $root->level = $level;
             $tree[] = $root;
-            if ($root->has_child === 1) {
+            if ($root->has_child == 1) {
                 $tree = array_merge($tree, self::makeTreeStatic($class_name, $root->id, $level + 1, $filter));
             }
         }
@@ -111,7 +111,7 @@ abstract class AbstractTreeView implements TreeViewInterface
                 'id' => $root->id,
                 'name' => $root->level . $root->name
             ];
-            if ($root->has_child === 1) {
+            if ($root->has_child == 1) {
                 $tree = array_merge($tree, self::makeTreeStaticArray($class_name, $root->id, $root->level . '-'));
             }
         }
