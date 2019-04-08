@@ -1,5 +1,7 @@
 # yii2-treeview
 
+[![Total Downloads](https://img.shields.io/packagist/dt/sorokinmedia/yii2-treeview.svg)](https://packagist.org/packages/sorokinmedia/yii2-treeview)
+
 ***
 Sorokin.Media repository
 ***
