@@ -14,7 +14,7 @@ interface TreeViewModelStaticInterface
      * получить дочерние модели родителя, статическая версия
      * @param int $parent_id
      * @param null $filter
-     * @return mixed
+     * @return array
      */
-    public static function getChildModelsStatic(int $parent_id, $filter = null);
+    public static function getChildModelsStatic(int $parent_id, $filter = null): array;
 }

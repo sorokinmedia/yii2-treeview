@@ -13,7 +13,7 @@ interface TreeViewModelInterface
     /**
      * получить дочерние модели родителя
      * @param int $parent_id
-     * @return mixed
+     * @return array
      */
-    public function getChildModels(int $parent_id);
+    public function getChildModels(int $parent_id): array;
 }
